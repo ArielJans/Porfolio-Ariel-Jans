@@ -1,0 +1,440 @@
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} */
+
+/*html{
+  font-size: 10px;
+} */
+
+/* DAR TAMAÑO INICIAL AL TEXTO EN HTML (font-size: 10px;) Y LUEGO DAR TAMAÑA CON REM A CADA TEXTO. EM TOMA EL TAMAÑO DEL ELEMENTO PADRE*/
+/*
+font-family: 'Cabin Condensed', sans-serif;
+font-family: 'Varela', sans-serif;
+font-family: 'Michroma', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Teko', sans-serif;
+font-family: 'BenchNine', sans-serif;
+*/
+
+body{
+  margin: 0;
+}
+
+/*----NAV-----*/
+nav{
+  background-color: rgba(0, 100, 255, 0.7);
+  padding: 19px;
+  text-align: right;
+  position: fixed;
+  width: 97%;
+  overflow:hidden;
+  z-index:1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-item{
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 27px;
+}
+
+.nav-item:hover {
+  color: rgba(216, 216, 218, 0.719);
+  transition: 1s;
+}
+
+.nav-item.active {
+  background-color: #6d7cc5ab;
+  transition: 1s;
+}
+
+.brand{
+  float: left;
+  color:white;
+  font-size: 22px;
+  text-decoration: none;
+  margin-left: 10px;
+  
+}
+
+.tex-brand{
+  color: rgba(22, 21, 21, 0.93);
+  margin-left: 10px;
+  font-size: 0.9em;
+}
+/*---- FIN NAV-----*/
+
+/*----SECCIÓN NAV CONTACTO-----*/
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  box-shadow: -3px 8px 16px 7px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 15px;
+  margin-left: 13px;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*----FIN SECCIÓN NAV CONTACTO-----*/
+
+/*---- TRABAJOS GRID CONTAINER-----*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding-top: 65px;
+}
+
+.grid-item {
+  overflow:hidden;
+  margin-bottom: -4px;
+  /*position: relative;*/
+}
+
+.grid-item:hover{
+  background-color: rgb(12, 12, 12);
+}
+
+.img-jobs {
+  width: 100%;
+  transition: 1s;
+}
+
+.img-jobs:hover {
+  transform:scale(1.2);
+  opacity: 0.5;
+  transition: 1s;
+}
+/*---- FIN TRABAJOS GRID CONTAINER-----*/
+
+
+
+/*----PRUEBA HOVER IMAGEN-----*/
+.container {
+  position: relative;
+  width: 100%;
+  overflow:hidden;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+.image:hover {
+  /*position: absolute; (se rompe cuando achico la pantalla)*/
+  transform:scale(1.2);
+  opacity: 0.2;
+  transition: 1s;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  /*background-color: rgb(12, 12, 12); (habilitando este "background-color" y la "position: absolute" en image:hover funciona pero se rrompe minimizado*/
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay span {
+  color: rgb(44, 42, 42);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Varela', sans-serif;
+  position: absolute;
+  top: 48%;
+  left: 25%;
+}
+
+.overlay p {
+  color: rgb(49, 47, 47);
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 55%;
+  left: 10%;
+}
+
+/*----FIN PRUEBA HOVER IMAGEN-----*/
+
+
+/*----JOBS IMG-----*/
+.img-jobs1{
+  width: 100%;
+  margin-top: 65px;
+  animation: ejem-jobs1 0.3s linear;
+}
+
+@keyframes ejem-jobs1 {
+  from {margin-top: 500px;}
+}
+/*----FIN JOBS IMG-----*/
+
+/*----JOBS 1-----*/
+.description{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.more-jobs{
+  display: flex;
+}
+
+.invitacion-codigo {
+  font-family: 'Varela', sans-serif;
+  color: #313131f1;
+}
+
+.invitacion-codigo a {
+  font-family: 'Varela', sans-serif;
+  color: #070707;
+  font-weight: bold;
+}
+
+h3 {
+  margin-bottom: -30px;
+  margin-top: 55px;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Varela', sans-serif;
+  color: #313131d6;
+}
+/*---- FIN JOBS 1-----*/
+
+/*----SOBRE MI-----*/
+.flex-container{
+  padding: 9% 5% 4% 5%;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #eaeef9b8;
+  
+}
+
+.contenido-img {
+  width: 500px;
+  text-align: center;
+}
+.contenido-tex {
+  width: 500px;
+  text-align: justify;
+}
+
+.contenido-tex h1{
+  font-family: 'Varela', sans-serif;
+  color: #313131d6;
+  font-size: 2rem;
+}
+
+.contenido-tex p{
+  font-family: 'Varela', sans-serif;
+  color: #313131d6;
+  font-size: 1rem;
+}
+
+.container-tecno{
+    margin: auto;
+    width: 75%;
+    height: 500px;
+    padding-top: 50px;
+
+}
+
+.container-tecno h2{
+  font-family: 'Varela', sans-serif;
+  color: #313131d6;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.barra{
+	position:relative;
+	height:30px;
+	background-color:#D5D5D5;
+	width:100%;
+  padding-top:5px;
+  border-radius: 20px;
+}
+.texto{
+	position:absolute;
+	padding-top:4px;
+  padding-left:10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.color{
+	position:absolute;
+	background-color:#0099ff;
+  height:25px;
+  border-radius: 20px;
+}
+/*----FIN SOBRE MI-----*/
+
+/*----BOTONES DE CONTACTO FLOTANTE-----*/
+.botonwhats {
+    width: 8rem;
+    z-index: 1;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: -2.5rem;
+}
+
+.whats {
+    width: 50%;
+    margin-left: -5px;
+}
+
+.boton-email {
+    width: 8rem;
+    z-index: 1;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 1.5rem;
+}
+
+.email {
+    width: 46%;
+    margin-right: -5px;   
+}
+/*----FIN BOTONES DE CONTACTO FLOTANTE-----*/
+
+/*----SECCIÓN CONTACTO JOBS-----*/
+.Contacto-jobs{
+  background-color: #eaeef9b8;
+  padding: 50px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.Contacto-jobs button{
+  cursor: pointer;
+  border-radius: 5px;
+  color:rgb(241, 238, 238);
+  background-color: #4c92ff;
+  border: #4c92ff;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-family: 'Varela', sans-serif;
+  transition: 1s;
+}
+
+.Contacto-jobs button:hover{
+box-shadow: 5px 10px 8px #888888;
+transition: 0.5s;
+}
+
+.Contacto-jobs h2{
+ font-family: 'Varela', sans-serif;
+ color: #313131d6;
+}
+/*----FIN SECCIÓN CONTACTO JOBS-----*/
+
+/*----SECCIÓN REDES-----*/
+.redes{
+  text-align: center;
+  height: 180px;
+  margin-top: 80px;
+}
+
+.icono-linkedin {
+  color: #3c75ce;
+  font-size: 4rem; 
+  margin: 0 8px;
+}
+
+.icono-github{
+  color: #070707;
+  font-size: 4rem;
+  margin: 0 8px;
+}
+
+.icono-email{
+  color: #d93025;
+  font-size: 4rem;
+  margin: 0 8px;
+}
+
+.icono-whatsapp{
+  color: #32b72b;
+  font-size: 4rem;
+  margin: 0 8px;
+}
+
+.redes-hover:hover{
+ opacity: 0.6;
+ transition: 0.5s;
+}
+
+.text-redes{
+  font-family: 'Varela', sans-serif;
+  color: #313131d6;
+  font-size: 1.1rem;
+  margin: 0 19%;
+  padding: 20px;
+}
+/*----FIN SECCIÓN REDES-----*/
+
+
