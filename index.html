@@ -13,12 +13,12 @@
 
 <body>
     <header>
-        <nav class="nav-list" class="topnav" id="myTopnav">
+        <nav class="nav-list" id="myTopnav">
             <a href="#" class="brand">Ariel Jans |<span class="tex-brand">Diseño y Programación Web</span></a>
-            <a href="index.html" class="nav-item active">TRABAJOS</a>
-            <a href="sobre-mi.html" class="nav-item">SOBRE MI</a>
+            <a href="index.html" class="nav-item active"><i class="fas fa-code"></i> TRABAJOS</a>
+            <a href="sobre-mi.html" class="nav-item"><i class="far fa-address-card"></i> SOBRE MI</a>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn nav-item">CONTACTO</a>
+                <a href="javascript:void(0)" class="dropbtn nav-item"><i class="fa fa-fw fa-envelope"></i> CONTACTO</a>
                 <div class="dropdown-content">
                     <a href="mailto:arjapro@gmail.com" target="blank"><i class="fas fa-envelope-square icono-email"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=541136099299&text=Hola!.%20Me%20interesa%20tu%20perfil%20profesional.%20Soy" target="blank"><i class="fab fa-whatsapp-square icono-whatsapp"></i></a>
@@ -27,17 +27,22 @@
                 </div>
             </li>
             </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
     </header> 
 
     <main>
         <div class="grid-container">
+
             <div class="container">
                 <a href="jobs1.html"><img class="image" src="img/ejem1.jpg"></a>
                 <div class="overlay">
                     <span>Título del Proyecto</span>
                     <p>Diseño de página Web Responsive</p>
                 </div>
+                
             </div>
             <div class="grid-item">
                 <a href="#"><img class="img-jobs" src="img/ejem2.jpg"></a>
@@ -64,5 +69,15 @@
             target="_blank" class="boton-email"><img class="email" src="img/email.jpg" alt="Botón Email Ariel Jans">
         </a>
     </main>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "nav-list") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav-list";
+            }
+        }
+    </script>
 </body>
 </html>
