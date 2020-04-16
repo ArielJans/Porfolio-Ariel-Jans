@@ -1,45 +1,40 @@
-body{
+body {
   margin: 0;
 }
 
 /*----NAV-----*/
-nav{
+nav {
   background-color: rgba(0, 100, 255, 0.7);
   padding: 19px;
   text-align: right;
-  overflow:hidden;
-  z-index:1;
-  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  z-index: 1;
+  font-family: "Montserrat", sans-serif;
 }
-
-.nav-item{
+.nav-item {
   color: white;
   font-size: 14px;
   text-decoration: none;
   padding: 27px;
 }
-
 .nav-item:hover {
   color: rgba(216, 216, 218, 0.719);
   transition: 1s;
 }
-
 .nav-item.active {
   background-color: #6d7cc5ab;
   transition: 1s;
   margin-top: 10px;
 }
 
-.brand{
+.brand {
   float: left;
-  color:white;
+  color: white;
   font-size: 22px;
   text-decoration: none;
   margin-left: 10px;
-  
 }
-
-.tex-brand{
+.tex-brand {
   color: rgba(22, 21, 21, 0.93);
   margin-left: 10px;
   font-size: 0.9em;
@@ -51,26 +46,22 @@ li.dropdown {
   display: inline-block;
   padding-top: 5px;
 }
-
 .dropdown-content {
   display: none;
   position: fixed;
   background-color: #f9f9f9;
-  box-shadow: -3px 8px 16px 7px rgba(0,0,0,0.2);
+  box-shadow: -3px 8px 16px 7px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-top: 15px;
   margin-left: 26px;
 }
-
 .dropdown-content a {
   padding: 12px 16px;
   display: block;
 }
-
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -83,37 +74,35 @@ li.dropdown {
   font-size: 1.5rem;
   color: #070707;
 }
-
 @media screen and (max-width: 1000px) {
   .tex-brand {
     display: none;
   }
 }
-
 @media screen and (max-width: 370px) {
   .contact {
     display: none;
   }
 }
-
-
 @media screen and (max-width: 900px) {
   li.dropdown {
-  padding-top: 5px;
-  float: left;
+    padding-top: 5px;
+    float: left;
+  }
 }
-}
-
 @media screen and (max-width: 900px) {
-  .nav-list a:not(:first-child) {display: none;}
+  .nav-list a:not(:first-child) {
+    display: none;
+  }
   .nav-list a.icon {
     float: right;
     display: block;
   }
 }
-
 @media screen and (max-width: 900px) {
-  .nav-list.responsive {position: relative;}
+  .nav-list.responsive {
+    position: relative;
+  }
   .nav-list.responsive .icon {
     position: absolute;
     right: 6%;
@@ -126,9 +115,8 @@ li.dropdown {
     text-align: left;
   }
 }
-
 .fa-fw {
-    margin-left: -2px;
+  margin-left: -2px;
 }
 /*---- FIN NAV RESPONSIVE----*/
 
@@ -136,137 +124,155 @@ li.dropdown {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  /*padding-top: 65px;*/
-}
-
-.grid-item {
-  overflow:hidden;
-  margin-bottom: -4px;
-  /*position: relative;*/
-}
-
-.grid-item:hover{
-  background-color: rgb(12, 12, 12);
-}
-
-.img-jobs {
-  width: 100%;
-  transition: 1s;
-}
-
-.img-jobs:hover {
-  transform:scale(1.2);
-  opacity: 0.5;
-  transition: 1s;
 }
 /*---- FIN TRABAJOS GRID CONTAINER-----*/
 
+/*----HOVER IMAGEN-----*/
 
-
-/*----PRUEBA HOVER IMAGEN-----*/
-.container {
-  position: relative;
-  width: 100%;
-  overflow:hidden;
-}
-
+/*Estilos Base*/
 .image {
   display: block;
   width: 100%;
   height: 100%;
   transition: 1s;
 }
-
-.image:hover {
-  /*position: absolute; (se rompe cuando achico la pantalla)*/
-  transform:scale(1.2);
-  opacity: 0.2;
-  transition: 1s;
-}
-
-.overlay {
-  height: 100%;
+.contenedor-img {
   width: 100%;
-  opacity: 0;
-  /*background-color: rgb(12, 12, 12); (habilitando este "background-color" y la "position: absolute" en image:hover funciona pero se rompe minimizado*/
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: #fff;
+}
+.contenedor-img .mascara,
+.contenedor-img .contenido {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.contenedor-img img {
+  display: block;
+  position: relative;
+}
+.contenedor-img h2 {
+  font-family: "Varela", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 25px;
+  padding: 10px;
+  background: rgba(129, 191, 233, 0.9);
+  margin: 20% 0 0 0;
+}
+.contenedor-img p {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px 10px;
+  text-align: center;
+}
+.contenedor-img a.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background-color: #4c92ff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: "Varela", sans-serif;
+  border-radius: 5px;
+}
+.contenedor-img a.link:hover {
+  box-shadow: 2px 6px 6px #61616175;
+  transition: 0.5s;
 }
 
-.container:hover .overlay {
+/*Cards*/
+.cards img {
+  transition: all 0.2s linear;
+}
+.cards .mascara {
+  opacity: 0;
+  background-color: rgba(46, 157, 120, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+.cards h2 {
+  transform: translateX(-200px); /*Desplazamos a la izquierda*/
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+  font-size: 1.2rem;
+}
+.cards p {
+  transform: translateX(200px); /*Desplazamos a la derecha*/
+  opacity: 0;
+  transition: all 0.4s linear;
+}
+.cards a.link {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  transform: translateY(100px); /*Desplazamos para abajo*/
+}
+.cards:hover img {
+  transform: scale(1.1); /*Damos un ligero zoom a la imagen*/
+}
+.cards:hover .mascara {
   opacity: 1;
 }
-
-.overlay span {
-  color: rgb(34, 33, 33);
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: 'Varela', sans-serif;
-  position: absolute;
-  top: 48%;
-  left: 25%;
+.cards:hover h2,
+.cards:hover p,
+.cards:hover a.link {
+  opacity: 1;
+  transform: translateX(0px); /*Regresamos a las posiciones originales*/
 }
-
-.overlay p {
-  color: rgb(41, 39, 39);
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
-  position: absolute;
-  top: 55%;
-  left: 10%;
+.cards:hover p {
+  transition-delay: 0.1s;
 }
-
-/*----FIN PRUEBA HOVER IMAGEN-----*/
-
-
-/*----JOBS IMG-----*/
-.img-jobs1{
-  width: 100%;
-  animation: ejem-jobs1 0.3s linear;
+.cards:hover a.link {
+  transition-delay: 0.2s; /*Aplicamos un pequeño retardo para que se muestre al final*/
+  transform: translateY(0px);
 }
-
-@keyframes ejem-jobs1 {
-  from {margin-top: 500px;}
-}
-/*----FIN JOBS IMG-----*/
+/*----FIN HOVER IMAGEN-----*/
 
 /*----JOBS 1-----*/
-.description{
+.description {
   margin-right: 10%;
   margin-left: 10%;
 }
-
-.more-jobs{
+.more-jobs {
   display: flex;
 }
-
 .invitacion-codigo {
-  font-family: 'Varela', sans-serif;
+  font-family: "Varela", sans-serif;
   color: #313131f1;
 }
-
 .invitacion-codigo a {
-  font-family: 'Varela', sans-serif;
+  font-family: "Varela", sans-serif;
   color: #070707;
   font-weight: bold;
 }
-
 h3 {
   margin-top: 55px;
   text-align: center;
   font-size: 2rem;
-  font-family: 'Varela', sans-serif;
+  font-family: "Varela", sans-serif;
   color: #313131d6;
 }
 /*---- FIN JOBS 1-----*/
 
 /*----SOBRE MI-----*/
-.flex-container{
+.flex-container {
   padding: 9% 5% 9% 5%;
   display: flex;
   flex-flow: row wrap;
   background-color: #eaeef9b8;
-  
 }
-
 .contenido-img {
   width: 500px;
   text-align: center;
@@ -275,156 +281,138 @@ h3 {
   width: 500px;
   text-align: justify;
 }
-
-.contenido-tex h1{
-  font-family: 'Varela', sans-serif;
+.contenido-tex h1 {
+  font-family: "Varela", sans-serif;
   color: #313131d6;
   font-size: 2rem;
 }
-
-.contenido-tex p{
-  font-family: 'Varela', sans-serif;
+.contenido-tex p {
+  font-family: "Varela", sans-serif;
   color: #313131d6;
   font-size: 1rem;
 }
-
-.container-tecno{
-    margin: auto;
-    width: 75%;
-    height: 500px;
-    padding-top: 50px;
-
+.container-tecno {
+  margin: auto;
+  width: 75%;
+  height: 500px;
+  padding-top: 50px;
 }
-
-.container-tecno h2{
-  font-family: 'Varela', sans-serif;
+.container-tecno h2 {
+  font-family: "Varela", sans-serif;
   color: #313131d6;
   font-size: 2rem;
   text-align: center;
   margin-bottom: 35px;
 }
-
-.barra{
-	position:relative;
-	height:30px;
-	background-color:#D5D5D5;
-	width:100%;
-  padding-top:5px;
+.barra {
+  position: relative;
+  height: 30px;
+  background-color: #d5d5d5;
+  width: 100%;
+  padding-top: 5px;
   border-radius: 20px;
 }
-.texto{
-	position:absolute;
-	padding-top:4px;
-  padding-left:10px;
-  font-family: 'Montserrat', sans-serif;
+.texto {
+  position: absolute;
+  padding-top: 4px;
+  padding-left: 10px;
+  font-family: "Montserrat", sans-serif;
 }
-.color{
-	position:absolute;
-	background-color:#0099ff;
-  height:25px;
+.color {
+  position: absolute;
+  background-color: #0099ff;
+  height: 25px;
   border-radius: 20px;
 }
 /*----FIN SOBRE MI-----*/
 
 /*----BOTONES DE CONTACTO FLOTANTE-----*/
 .botonwhats {
-    width: 8rem;
-    z-index: 1;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: -2.5rem;
+  width: 8rem;
+  z-index: 1;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: -2.5rem;
 }
-
 .whats {
-    width: 50%;
-    margin-left: -5px;
+  width: 50%;
+  margin-left: -5px;
 }
-
 .boton-email {
-    width: 8rem;
-    z-index: 1;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    left: 1.5rem;
+  width: 8rem;
+  z-index: 1;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  left: 1.5rem;
 }
-
 .email {
-    width: 46%;
-    margin-right: -5px;   
+  width: 46%;
+  margin-right: -5px;
 }
 /*----FIN BOTONES DE CONTACTO FLOTANTE-----*/
 
 /*----SECCIÓN CONTACTO JOBS-----*/
-.Contacto-jobs{
+.Contacto-jobs {
   background-color: #eaeef9b8;
   padding: 50px;
   margin: 30px 0;
   text-align: center;
 }
-
-.Contacto-jobs button{
+.Contacto-jobs button {
   cursor: pointer;
   border-radius: 5px;
-  color:rgb(241, 238, 238);
+  color: rgb(241, 238, 238);
   background-color: #4c92ff;
   border: #4c92ff;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
-  font-family: 'Varela', sans-serif;
+  font-family: "Varela", sans-serif;
   transition: 1s;
 }
-
-.Contacto-jobs button:hover{
-box-shadow: 5px 10px 8px #c1c0c0;
-transition: 0.5s;
+.Contacto-jobs button:hover {
+  box-shadow: 5px 10px 8px #c1c0c0;
+  transition: 0.5s;
 }
-
-.Contacto-jobs h2{
- font-family: 'Varela', sans-serif;
- color: #313131d6;
+.Contacto-jobs h2 {
+  font-family: "Varela", sans-serif;
+  color: #313131d6;
 }
 /*----FIN SECCIÓN CONTACTO JOBS-----*/
 
 /*----SECCIÓN REDES-----*/
-.redes{
+.redes {
   text-align: center;
   height: 180px;
   margin-top: 80px;
 }
-
 .icono-linkedin {
   color: #3c75ce;
-  font-size: 4rem; 
+  font-size: 4rem;
   margin: 0 8px;
 }
-
-.icono-github{
+.icono-github {
   color: #070707;
   font-size: 4rem;
   margin: 0 8px;
 }
-
-.icono-email{
+.icono-email {
   color: #d93025;
   font-size: 4rem;
   margin: 0 8px;
 }
-
-.icono-whatsapp{
+.icono-whatsapp {
   color: #32b72b;
   font-size: 4rem;
   margin: 0 8px;
 }
-
-.redes-hover:hover{
- opacity: 0.6;
- transition: 0.5s;
+.redes-hover:hover {
+  opacity: 0.6;
+  transition: 0.5s;
 }
-
-.text-redes{
-  font-family: 'Varela', sans-serif;
+.text-redes {
+  font-family: "Varela", sans-serif;
   color: #313131d6;
   font-size: 1.1rem;
   margin: 0 19%;
@@ -433,8 +421,9 @@ transition: 0.5s;
 /*----FIN SECCIÓN REDES-----*/
 
 /*----IMG PERFIL-----*/
-.img_perf{
+.img_perf {
   border-radius: 100%;
-  box-shadow: 2px 4px 16px 2px rgba(179,168,179,1);
+  box-shadow: 2px 4px 16px 2px rgba(179, 168, 179, 1);
+  background: url();
 }
 /*----FIN IMG PERFIL-----*/
