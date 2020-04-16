@@ -1,62 +1,3 @@
-/*html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} */
-
-/*html{
-  font-size: 10px;
-} */
-
-/* DAR TAMAÑO INICIAL AL TEXTO EN HTML (font-size: 10px;) Y LUEGO DAR TAMAÑA CON REM A CADA TEXTO. EM TOMA EL TAMAÑO DEL ELEMENTO PADRE*/
-/*
-font-family: 'Cabin Condensed', sans-serif;
-font-family: 'Varela', sans-serif;
-font-family: 'Michroma', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Fjalla One', sans-serif;
-font-family: 'Teko', sans-serif;
-font-family: 'BenchNine', sans-serif;
-*/
-
 body{
   margin: 0;
 }
@@ -66,8 +7,6 @@ nav{
   background-color: rgba(0, 100, 255, 0.7);
   padding: 19px;
   text-align: right;
-  position: fixed;
-  width: 97%;
   overflow:hidden;
   z-index:1;
   font-family: 'Montserrat', sans-serif;
@@ -88,6 +27,7 @@ nav{
 .nav-item.active {
   background-color: #6d7cc5ab;
   transition: 1s;
+  margin-top: 10px;
 }
 
 .brand{
@@ -136,10 +76,10 @@ li.dropdown {
 }
 /*----FIN SECCIÓN NAV CONTACTO-----*/
 
-/*---- PRUEBA NAV RESPONSIVE---*/
+/*---- NAV RESPONSIVE---*/
 .nav-list .icon {
   display: none;
-  padding-right: 25px;
+  padding-right: 18px;
   font-size: 1.5rem;
   color: #070707;
 }
@@ -149,7 +89,20 @@ li.dropdown {
     display: none;
   }
 }
-  
+
+@media screen and (max-width: 370px) {
+  .contact {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  li.dropdown {
+  padding-top: 5px;
+  float: left;
+}
+}
 
 @media screen and (max-width: 900px) {
   .nav-list a:not(:first-child) {display: none;}
@@ -163,7 +116,7 @@ li.dropdown {
   .nav-list.responsive {position: relative;}
   .nav-list.responsive .icon {
     position: absolute;
-    right: 9%;
+    right: 6%;
     top: 12px;
     width: 0;
   }
@@ -173,13 +126,17 @@ li.dropdown {
     text-align: left;
   }
 }
-/*---- FIN PRUEBA NAV RESPONSIVE----*/
+
+.fa-fw {
+    margin-left: -2px;
+}
+/*---- FIN NAV RESPONSIVE----*/
 
 /*---- TRABAJOS GRID CONTAINER-----*/
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  padding-top: 65px;
+  /*padding-top: 65px;*/
 }
 
 .grid-item {
@@ -231,7 +188,7 @@ li.dropdown {
   height: 100%;
   width: 100%;
   opacity: 0;
-  /*background-color: rgb(12, 12, 12); (habilitando este "background-color" y la "position: absolute" en image:hover funciona pero se rrompe minimizado*/
+  /*background-color: rgb(12, 12, 12); (habilitando este "background-color" y la "position: absolute" en image:hover funciona pero se rompe minimizado*/
 }
 
 .container:hover .overlay {
@@ -263,7 +220,6 @@ li.dropdown {
 /*----JOBS IMG-----*/
 .img-jobs1{
   width: 100%;
-  margin-top: 65px;
   animation: ejem-jobs1 0.3s linear;
 }
 
@@ -294,7 +250,6 @@ li.dropdown {
 }
 
 h3 {
-  margin-bottom: -30px;
   margin-top: 55px;
   text-align: center;
   font-size: 2rem;
@@ -305,7 +260,7 @@ h3 {
 
 /*----SOBRE MI-----*/
 .flex-container{
-  padding: 9% 5% 4% 5%;
+  padding: 9% 5% 9% 5%;
   display: flex;
   flex-flow: row wrap;
   background-color: #eaeef9b8;
@@ -422,7 +377,7 @@ h3 {
 }
 
 .Contacto-jobs button:hover{
-box-shadow: 5px 10px 8px #888888;
+box-shadow: 5px 10px 8px #c1c0c0;
 transition: 0.5s;
 }
 
@@ -477,4 +432,9 @@ transition: 0.5s;
 }
 /*----FIN SECCIÓN REDES-----*/
 
-
+/*----IMG PERFIL-----*/
+.img_perf{
+  border-radius: 100%;
+  box-shadow: 2px 4px 16px 2px rgba(179,168,179,1);
+}
+/*----FIN IMG PERFIL-----*/

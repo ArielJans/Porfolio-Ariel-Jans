@@ -14,30 +14,28 @@
 
 <body>
     <header>
-        <nav class="nav-list">
-            <a href="#" class="brand">Ariel Jans |<span class="tex-brand">Diseño y Programación Web</span></a>
-            <a href="index.html" class="nav-item">TRABAJOS</a>
-            <a href="sobre-mi.html" class="nav-item active">SOBRE MI</a>
+        <nav class="nav-list" id="myTopnav">
+            <a href="index.html" class="brand">Ariel Jans |<span class="tex-brand">Diseño y Programación Web</span></a>
+            <a href="index.html" class="nav-item"><i class="fas fa-code"></i> TRABAJOS</a>
+            <a href="sobre-mi.html" class="nav-item active"><i class="far fa-address-card"></i> SOBRE MI</a>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn nav-item">CONTACTO</a>
-                <div class="dropdown-content">
-                    <a href="mailto:arjapro@gmail.com" target="blank"><i class="fas fa-envelope-square icono-email"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=541136099299&text=Hola!.%20Me%20interesa%20tu%20perfil%20profesional.%20Soy" target="blank"><i class="fab fa-whatsapp-square icono-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/arieljans/" target="blank"><i class="fab fa-linkedin icono-linkedin"></i></a>
-                    <a href="https://github.com/ArieloJ" target="blank"><i class="fab fa-github-square icono-github"></i></a>
-                </div>
+                <a href="mailto:arjapro@gmail.com" class="nav-item contact"><i class="fa fa-fw fa-envelope"></i>
+                    CONTACTO</a>
             </li>
+            <a class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
     </header>
 
     <main class="container-gral">
         <div class="flex-container">
             <div class="contenido-img">
-                <img src="img/perfil.png" alt="">
+                <img class="img_perf" src="img/perfil.png" alt="Imagen de Perfil">
             </div>
             <div class="contenido-tex">
                 <h1> Sobre Mi</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis harum nemo deleniti voluptates quos tempore vel quod, dolorem deserunt consequuntur, commodi tempora exercitationem. Tempora sit temporibus nihil vero accusantium cupiditate.</p>
+                <p>Entusiasta por la tecnología, capacitándome en programación web y actualmente buscando sumar experiencia laboral en el mundo IT. Autodidacta, creativo, curioso e innovador, con más de 6 años de experiencia en ventas, promoción, relaciones públicas y marketing. Excelente relaciones interpersonales y trabajo en equipo.</p>
             </div>
         </div>
 
@@ -93,7 +91,7 @@
         </div>
 
     </main>
-
+<script src="js/scripts.js"></script>
 </body>
 
 </html>
